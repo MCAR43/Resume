@@ -7,7 +7,7 @@ VIDEO_ID_FILE = "videoIDs.txt"
 BASE_URI = "https://www.youtube.com/watch?v="
 FIRST = 'viewCount"'
 SECOND = '","author'
-VAR = "!REPLACEMEDADDY!"
+VAR = "!REPLACE!"
 def loadIDs():
     videoIDs = []
     with open(VIDEO_ID_FILE, 'r') as f:
@@ -32,7 +32,6 @@ def main():
         vidViews = getViewForVideo(postfix)
         tot = tot + vidViews 
         print("Video has %d views" % int(vidViews))
-        sleep(0.2)
     replaceTexFile(tot)
 
     
